@@ -11,8 +11,11 @@ Google forms dumps the input data into a spreadsheet. I'd like a column in that 
 
 - Copy and paste Andrew's function into the script editor
 - find/replace all "document.getElement..." lines. 
--- This means rewriting some parsing of input variables. Instead of reading them from page elements, they should be passed as arguments to the function. I also chose to implement walking as a boolean rather than a second duration variable, but that's just preference.
+-- This means rewriting some parsing of input variables. Instead of reading them from page elements, they should be passed as arguments to the function. 
+-- I chose to implement walking as a boolean rather than a second duration variable, but that's just preference.
+-- I wrote a js function to convert times in the format 12:59.99 to decimal seconds
 -- for output, I just deleted the lines that modified the page content.
 - add a return statement, In my case, it was just `return total_score;`
+- add JSDoc sections for autocomplete
 
 Save the script. You should now be able to call `usafcalc()` (the original function) as a spreadsheet function `=usafcalc(K2,J2,L2,M2,F2,H2,G2,I2,R2)` 
