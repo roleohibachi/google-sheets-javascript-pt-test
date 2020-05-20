@@ -9,6 +9,21 @@ function getSeconds(str) {
   return seconds;
 }
 
+/**
+ * Provides a USAF PT Test Score
+ *
+ * @param {gender} input The string "Male" or "Female".
+ * @param {age} input Age, an integer.
+ * @param {height} input height, an integer in inches.
+ * @param {weight} input weight, an integer in pounds.
+ * @param {abd} input Abdominal circumference measurement, in decimal inches.
+ * @param {push} input Push-ups, an integer.
+ * @param {sit} input Sit-ups, an integer.
+ * @param {run_time} input The duration of the 1.5-mile run (or walk), in the format 12:59.99.
+ * @param {is_walk} input Whether the run or walk test was performed, the string "TRUE" or "FALSE"
+ * @return The PT test score, as a decimal from 0 to 100
+ * @customfunction
+ */
 function ptscore(gender,age,height,weight,abd,push,sit,run_time,is_walk){
 		age = parseInt(age);
 		height = parseInt(height);
@@ -1648,6 +1663,21 @@ function ptscore(gender,age,height,weight,abd,push,sit,run_time,is_walk){
 		
 	}
 	
+/**
+ * Provides a USAF PT Test Rating (Excellent, Satisfactory, etc)
+ *
+ * @param {gender} input The string "Male" or "Female".
+ * @param {age} input Age, an integer.
+ * @param {height} input height, an integer in inches.
+ * @param {weight} input weight, an integer in pounds.
+ * @param {abd} input Abdominal circumference measurement, in decimal inches.
+ * @param {push} input Push-ups, an integer.
+ * @param {sit} input Sit-ups, an integer.
+ * @param {run_time} input The duration of the 1.5-mile run (or walk), in the format 12:59.99.
+ * @param {is_walk} input Whether the run or walk test was performed, the string "TRUE" or "FALSE"
+ * @return The PT test rating, as a string
+ * @customfunction
+ */
 	function ptrating(gender,age,height,weight,abd,push,sit,run_time,is_walk){
 		age = parseInt(age);
 		height = parseInt(height);
